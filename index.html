@@ -1,31 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./assets/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id="app">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="./assets/vite.svg" class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-          <img src="./assets/javascript.svg" class="logo vanilla" alt="JavaScript logo" />
-        </a>
-        <h1>Hello Vite!</h1>
-        <a href="./contact/">Go to contact page</a>
-        <div class="card">
-          <button id="counter" type="button">Counter 0</button>
-        </div>
-        <p class="read-the-docs">
-          Click on the Vite logo to learn more
-        </p>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./assets/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="app">
+    <nav class="mx-5 mt-10">
+      <ul class="flex justify-between items-center border rounded-full py-1 bg-tertariy text-white">
+        <li class="bg-primary px-5 py-3 rounded-3xl m-1"><a href="/#">Accueil</a></li>
+        <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1"><a href="/">A propos</a></li>
+        <li class="hover:bg-primary  px-5 py-3 rounded-3xl m-1"><a href="/">Service</a></li>
+        <li class="hover:bg-primary  px-5 py-3 rounded-3xl m-1"><a href="/">CV</a></li>
+        <li class="hover:bg-primary  px-5 py-3 rounded-3xl m-1"><a href="/">Projet</a></li>
+        <li class="hover:bg-primary  px-5 py-3 rounded-3xl m-1"><a href="/">Contact</a></li>
+      </ul>
+    </nav>
+
+
+    <!--SECTION HERO-->
+
+    <section id="section-hero">
+
+
+
+
+      <div class="text-center">
+        <button class="border-2 border-black rounded-3xl px-4 py-2">Hello !</button>
+        <h1 class="text-5xl">Salut, Je suis <a href="https://www.linkedin.com/in/julien-castro/"
+            class="text-primary">Julien</a> <br>un développeur</h1>
       </div>
-    </div>
-    <script type="module" src="./main.js"></script>
-  </body>
+
+
+      <div class="flex justify-end gap-3 flex-col">
+        <img src="assets/images/etoiles.svg" alt="etoiles" class="h-8">
+        <p class="text-3xl font-bold">2 ans</p>
+        <span class="font-bold">
+          d'expérience
+        </span>
+      </div>
+
+
+
+      <div class="flex">
+        <button class="flex">
+          Porfolio
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z" />
+          </svg>
+        </button>
+        <button>Contact</button>
+      </div>
+    </section>
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+
 </html>
