@@ -2,63 +2,89 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="./assets/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Homepage</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./assets/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/reset.css">
 </head>
 
 <body>
-  <div id="app">
-    <nav class="mx-5 mt-10">
-      <ul class="flex justify-between items-center border rounded-full py-1 bg-tertariy text-white">
-        <li class="bg-primary px-5 py-3 rounded-3xl m-1"><a href="/#">Accueil</a></li>
-        <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1"><a href="/">A propos</a></li>
-        <li class="hover:bg-primary  px-5 py-3 rounded-3xl m-1"><a href="/">Service</a></li>
-        <li class="hover:bg-primary  px-5 py-3 rounded-3xl m-1"><a href="/">CV</a></li>
-        <li class="hover:bg-primary  px-5 py-3 rounded-3xl m-1"><a href="/">Projet</a></li>
-        <li class="hover:bg-primary  px-5 py-3 rounded-3xl m-1"><a href="/">Contact</a></li>
-      </ul>
-    </nav>
+    <div id="app">
+        <nav class="mx-5 mt-10">
+            <ul class="flex justify-between items-center border rounded-full p-2 bg-tertariy text-white text-lg">
+                <li class="bg-primary px-5 py-3 rounded-3xl m-1"><a href="/#">Accueil</a></li>
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1"><a href="/">A propos</a></li>
+                <li class="hover:bg-primary  px-5 py-3 rounded-3xl m-1"><a href="/">Service</a></li>
+                <li class="hover:bg-primary  px-5 py-3 rounded-3xl m-1"><a href="/">CV</a></li>
+                <li class="hover:bg-primary  px-5 py-3 rounded-3xl m-1"><a href="/">Projet</a></li>
+                <li class="hover:bg-primary  px-5 py-3 rounded-3xl m-1"><a href="/">Contact</a></li>
+            </ul>
+        </nav>
 
+        <!--SECTION HERO-->
+        <section id="section-hero" class="h-full ">
+            <div class="text-center mt-5">
+                <div class="flex justify-center relative w-fit m-auto">
+                    <button class="border-2 border-black rounded-xl px-4 py-2">Hello !</button>
+                    <img src="assets/images/hero/petit splash.svg" alt="petit splash" class="absolute -right-10 -top-8">
+                </div>
+                <div class="flex-col justify-start relative w-fit m-auto">
+                    <h1 class="text-5xl mt-3">Salut, Je suis <a href="https://www.linkedin.com/in/julien-castro/"
+                            class="text-primary">Julien</a> <br>un développeur</h1>
+                    <img src="assets/images/hero/grand splash.png" alt="grand splash"
+                        class="absolute -bottom-15 -left-10">
+                </div>
+            </div>
 
-    <!--SECTION HERO-->
+            <div id="note-experience" class="flex gap-3 flex-col items-end pr-10 mt-5 absolute right-0">
+                <img src="assets/images/etoiles.svg" alt="etoiles" class="h-8 justify-end">
+                <p class="text-6xl font-bold">2 ans</p>
+                <span class="font-bold">d'expérience</span>
+            </div>
 
-    <section id="section-hero">
+            <!--Contenue HERO -->
+            <div id="contenue-hero" class="relative m-auto mt-96 h-3/6 w-2/6">
+                <div class="half-circle z-0 absolute m-auto right bottom-0">
+                    <img src="assets/images/hero/Ellipse 2.svg" alt="">
+                </div>
+                <!--Image de moi-->
+                <img src="assets/images/Julien_CASTRO-removebg-preview.png" alt="julien"
+                    class="z-1 absolute m-auto bottom-0 left-1/2 -translate-x-1/2">
+                <!--bouton de contact ou projet-->
+                <div id="hero-contact-bouton"
+                    class="flex-col justify-center items-center rounded-full z-2 absolute bottom-5 left-1/2 -translate-x-1/2">
+                    <div
+                        class="flex justify-center items-center gap-5 border-6 border-white text-white rounded-full glass-effect px-2">
+                        <button class="flex bg-primary rounded-full p-3 px-5 text-white">
+                            Porfolio
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#e8eaed">
+                                <path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z" />
+                            </svg>
+                        </button>
+                        <button class="test">Contact</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!--SECTION mes services-->
+        <section id="section-service" class="text-white">
+            <div class="flex-col">
+                <h1 class="text-6xl ">Mes <a class="text-primary">service</a></h1>
+                <p>Voici les différents services que je peux proposer.</p>
+            </div>
 
+            <div class="image-container z-0">
+                <img src="assets/images/service/fond-anime1.svg" alt="animation1" class="svg-image">
+                <img src="assets/images/service/fond-anime2.svg" alt="animation2" class="svg-image">
+            </div>
+        </section>
 
-
-      <div class="text-center">
-        <button class="border-2 border-black rounded-3xl px-4 py-2">Hello !</button>
-        <h1 class="text-5xl">Salut, Je suis <a href="https://www.linkedin.com/in/julien-castro/"
-            class="text-primary">Julien</a> <br>un développeur</h1>
-      </div>
-
-
-      <div class="flex justify-end gap-3 flex-col">
-        <img src="assets/images/etoiles.svg" alt="etoiles" class="h-8">
-        <p class="text-3xl font-bold">2 ans</p>
-        <span class="font-bold">
-          d'expérience
-        </span>
-      </div>
-
-
-
-      <div class="flex">
-        <button class="flex">
-          Porfolio
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-            <path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z" />
-          </svg>
-        </button>
-        <button>Contact</button>
-      </div>
-    </section>
-  </div>
-  <script type="module" src="./main.js"></script>
+    </div>
+    <script type="module" src="./main.js"></script>
 </body>
 
 </html>
