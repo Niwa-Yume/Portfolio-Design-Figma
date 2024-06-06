@@ -6,8 +6,8 @@
     <link rel="icon" type="image/svg+xml" href="./assets/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -16,10 +16,10 @@
             <ul class="flex justify-between items-center border rounded-full p-2 bg-tertariy text-white text-lg">
                 <li class="bg-primary px-5 py-3 rounded-3xl m-1"><a href="/#">Accueil</a></li>
                 <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1"><a href="/">A propos</a></li>
-                <li class="hover:bg-primary  px-5 py-3 rounded-3xl m-1"><a href="/">Service</a></li>
-                <li class="hover:bg-primary  px-5 py-3 rounded-3xl m-1"><a href="/">CV</a></li>
-                <li class="hover:bg-primary  px-5 py-3 rounded-3xl m-1"><a href="/">Projet</a></li>
-                <li class="hover:bg-primary  px-5 py-3 rounded-3xl m-1"><a href="/">Contact</a></li>
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1"><a href="/">Service</a></li>
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1"><a href="/">CV</a></li>
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1"><a href="/">Projet</a></li>
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1"><a href="/">Contact</a></li>
             </ul>
         </nav>
 
@@ -56,15 +56,19 @@
                 <div id="hero-contact-bouton"
                     class="flex-col justify-center items-center rounded-full z-2 absolute bottom-5 left-1/2 -translate-x-1/2">
                     <div
-                        class="flex justify-center items-center gap-5 border-6 border-white text-white rounded-full glass-effect px-2">
-                        <button class="flex bg-primary rounded-full p-3 px-5 text-white">
-                            Porfolio
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                                fill="#e8eaed">
+                        class="flex justify-center items-center gap-5 text-white rounded-full glass-effect px-2">
+                        <button id="portfolio-btn" class="flex bg-primary rounded-full p-3 px-5 text-white hover:border hover:border-primary">
+                            Portfolio
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" class="svg-portfolio">
                                 <path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z" />
                             </svg>
                         </button>
-                        <button class="test">Contact</button>
+                        <button id="contact-btn" class="flex rounded-full p-3 px-5  hover:bg-primary hover:text-white">
+                            Contact
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" class="svg-contact hidden">
+                                <path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
