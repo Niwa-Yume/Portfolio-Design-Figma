@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             data.forEach(projet => {
                 const projetHTML = `
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
+                <div class="bg-slate-500 rounded-lg shadow-xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
                     <img src="${projet.image}" alt="${projet.title}" class="w-full h-64 object-cover transition-opacity hover:opacity-80 duration-300">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold text-gray-800 transition-colors text-center hover:text-orange-500 duration-300">${projet.title}</h3>
