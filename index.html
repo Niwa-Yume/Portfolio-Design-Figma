@@ -8,23 +8,44 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Animation for the specific image */
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .slide-in-right {
+            animation: slideInFromRight 1s ease-out forwards;
+            /* Use ease-out to smooth the end of the animation */
+            animation-fill-mode: forwards;
+        }
+    </style>
 </head>
 
 <body>
     <div id="app">
         <nav class="mx-5 mt-10">
-            <ul class="flex justify-between items-center border rounded-full p-2 bg-tertariy text-white text-lg">
-                <li class="bg-primary px-5 py-3 rounded-3xl m-1"><a href="/#">Accueil</a></li>
-                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1"><a href="/">A propos</a></li>
-                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1"><a href="/">Service</a></li>
-                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1"><a href="/">CV</a></li>
-                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1"><a href="/">Projet</a></li>
-                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1"><a href="/">Contact</a></li>
+            <ul
+                class="flex justify-between items-center border rounded-full p-2 bg-tertariy text-white text-lg transition">
+                <li class="bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/#">Accueil</a></li>
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">A propos</a></li>
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">Service</a></li>
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">CV</a></li>
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">Projet</a></li>
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">Contact</a></li>
             </ul>
         </nav>
 
         <!--SECTION HERO-->
-        <section id="section-hero" class="h-full ">
+        <section id="section-hero" class="">
             <div class="text-center mt-5">
                 <div class="flex justify-center relative w-fit m-auto">
                     <button class="border-2 border-black rounded-xl px-4 py-2">Hello !</button>
@@ -45,27 +66,31 @@
             </div>
 
             <!--Contenue HERO -->
-            <div id="contenue-hero" class="relative m-auto mt-96 h-3/6 w-2/6">
-                <div class="half-circle z-0 absolute m-auto right bottom-0">
-                    <img src="assets/images/hero/Ellipse 2.svg" alt="">
+            <div id="contenue-hero" class="relative m-auto mt-96">
+                <div class="relative mt-96 ">
+                    <div class="half-circle z-0 absolute inset-0 flex justify-center items-center">
+                        <img src="assets/images/hero/Ellipse 2.svg" alt="" class="object-center bottom-0">
+                    </div>
+                    <img src="assets/images/Julien_CASTRO-removebg-preview.png" alt="julien"
+                        class="z-1 m-auto bottom-0 left-1/2 -translate-x-1/2 slide-in-right">
                 </div>
                 <!--Image de moi-->
-                <img src="assets/images/Julien_CASTRO-removebg-preview.png" alt="julien"
-                    class="z-1 absolute m-auto bottom-0 left-1/2 -translate-x-1/2">
                 <!--bouton de contact ou projet-->
                 <div id="hero-contact-bouton"
                     class="flex-col justify-center items-center rounded-full z-2 absolute bottom-5 left-1/2 -translate-x-1/2">
-                    <div
-                        class="flex justify-center items-center gap-5 text-white rounded-full glass-effect px-2">
-                        <button id="portfolio-btn" class="flex bg-primary rounded-full p-3 px-5 text-white hover:border hover:border-primary">
+                    <div class="flex justify-center items-center gap-5 text-white rounded-full glass-effect px-2">
+                        <button id="portfolio-btn"
+                            class="flex bg-primary rounded-full p-3 px-5 text-white hover:border hover:border-primary">
                             Portfolio
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" class="svg-portfolio">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#e8eaed" class="svg-portfolio">
                                 <path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z" />
                             </svg>
                         </button>
-                        <button id="contact-btn" class="flex rounded-full p-3 px-5  hover:bg-primary hover:text-white">
+                        <button id="contact-btn" class="flex rounded-full p-3 px-5 hover:bg-primary hover:text-white">
                             Contact
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" class="svg-contact hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#e8eaed" class="svg-contact hidden">
                                 <path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z" />
                             </svg>
                         </button>
@@ -75,17 +100,220 @@
         </section>
 
         <!--SECTION mes services-->
-        <section id="section-service" class="text-white">
-            <div class="flex-col justify-start pl-5 pt-10">
-                <h1 class="text-6xl ">Mes <a class="text-primary">service</a></h1>
+        <section id="section-service" class="text-white flex justify-center items-center">
+            <div class="relative flex-col justify-center items-center text-center z-10">
+                <h1 class="text-6xl">Mes <a class="text-primary">services</a></h1>
                 <p>Voici les différents services que je peux proposer.</p>
+                <div class="flex flex-wrap justify-center gap-10 pt-10 z-10">
+                    <!-- Création de Site Web Card -->
+                    <div
+                        class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg text-black rounded-xl shadow-md overflow-hidden w-96">
+                        <img class="w-full h-64 object-cover" src="assets/images/service/website-creation.jpg"
+                            alt="Service Image">
+                        <div class="p-5">
+                            <h2 class="text-2xl font-bold">Création de Site Web</h2>
+                            <p class="mt-2 text-gray-200">Nous offrons des services de création de sites web modernes et
+                                réactifs.</p>
+                            <button
+                                class="mt-4 px-4 py-2 bg-primary text-white rounded-full hover:bg-secondary transition duration-300">En
+                                savoir plus</button>
+                        </div>
+                    </div>
+
+                    <!-- Création de Bot Card -->
+                    <div
+                        class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg text-black rounded-xl shadow-md overflow-hidden w-96">
+                        <img class="w-full h-64 object-cover" src="assets/images/service/bot-creation.jpg"
+                            alt="Service Image">
+                        <div class="p-5">
+                            <h2 class="text-2xl font-bold">Création de Bot</h2>
+                            <p class="mt-2 text-gray-200">Développons des bots personnalisés pour automatiser vos
+                                tâches.</p>
+                            <button
+                                class="mt-4 px-4 py-2 bg-primary text-white rounded-full hover:bg-secondary transition duration-300">En
+                                savoir plus</button>
+                        </div>
+                    </div>
+
+                    <!-- Analyse des Besoins Card -->
+                    <div
+                        class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg text-black rounded-xl shadow-md overflow-hidden w-96">
+                        <img class="w-full h-64 object-cover" src="assets/images/service/needs-analysis.jpg"
+                            alt="Service Image">
+                        <div class="p-5">
+                            <h2 class="text-2xl font-bold">Analyse des Besoins</h2>
+                            <p class="mt-2 text-gray-200">Analyse complète de vos besoins pour des solutions sur mesure.
+                            </p>
+                            <button
+                                class="mt-4 px-4 py-2 bg-primary text-white rounded-full hover:bg-secondary transition duration-300">En
+                                savoir plus</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="image-container z-0">
+            <div class="image-container">
                 <img src="assets/images/service/fond-anime1.svg" alt="animation1" class="svg-image">
                 <img src="assets/images/service/fond-anime2.svg" alt="animation2" class="svg-image">
             </div>
         </section>
+
+        <!--Work experience-->
+        <section class="work-experience">
+            <div class="container mx-auto px-4 py-8">
+                <h2 class="text-4xl font-bold text-center mb-12">
+                    Mon <span class="text-orange-500">Expérience professionnels</span>
+                </h2>
+                <div class="relative flex flex-col md:flex-row justify-between items-start md:items-center">
+                    <div class="w-full md:w-1/2 space-y-12">
+                        <div class="bg-white rounded-lg p-6">
+                            <h3 class="text-2xl font-semibold text-gray-800">Noctinium</h3>
+                            <p class="text-zinc-500">sep 2022 - Aujourd'hui</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6">
+                            <h3 class="text-2xl font-semibold text-gray-800">Infomaniak</h3>
+                            <p class="text-zinc-500">Novembre 2023 - Décembre 2023</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6">
+                            <h3 class="text-2xl font-semibold text-gray-800">Flow Bank</h3>
+                            <p class="text-zinc-500">Janvier 2023 - Mars 2023</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex flex-col items-center absolute left-1/2 transform -translate-x-1/2">
+                        <div class="w-4 h-4 bg-orange-500 border-4 border-white rounded-full mb-8"></div>
+                        <div class="w-1 h-20 bg-zinc-500 mb-8"></div>
+                        <div class="w-4 h-4 bg-zinc-800 border-4 border-white rounded-full mb-8"></div>
+                        <div class="w-1 h-20 bg-zinc-500 mb-8"></div>
+                        <div class="w-4 h-4 bg-orange-500 border-4 border-white rounded-full"></div>
+                    </div>
+                    <div class="w-full md:w-1/2 md:pl-8 space-y-12">
+                        <div class="bg-white rounded-lg p-6">
+                            <h3 class="text-2xl font-semibold text-gray-800">Fondateur</h3>
+                            <p class="text-zinc-500">Projet personnel ou j'organise des événements et une plateforme
+                                pour référencer les événements de la ville de Genève</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6">
+                            <h3 class="text-2xl font-semibold text-gray-800">Support technique 1 et 2 Spécialiste Ksuite
+                            </h3>
+                            <p class="text-zinc-500">experience dans le monde de la tech. J'ai pu mettre un premier
+                                pieds dedans et me plongez sur d'autre aspects que je n'avais jamais pu faire avant.</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6">
+                            <h3 class="text-2xl font-semibold text-gray-800">Sales Trader</h3>
+                            <p class="text-zinc-500">J'ai pu apprendre à gérer des clients et à comprendre les besoins
+                                de chacun. J'ai pu aussi apprendre à gérer des situations de stress et à être réactif.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Pourquoi moi -->
+
+        <section>
+            <div
+                class="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg p-12 flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
+                <img src="assets/images/Julien_CASTRO-removebg-preview.png" alt="Profile Picture" class="">
+                <div class="text-center md:text-left max-w-2xl">
+                    <h2 class="text-5xl font-bold text-gray-800">Pourquoi <span class="text-orange-500">me
+                            choisir</span> ?</h2>
+                    <p class="text-gray-600 mt-6 text-lg leading-relaxed">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales.</p>
+                    <div class="flex justify-center md:justify-start space-x-12 mt-8">
+                        <div>
+                            <p class="text-4xl font-bold text-gray-800">450+</p>
+                            <p class="text-gray-600">Projets Complétés</p>
+                        </div>
+                        <div>
+                            <p class="text-4xl font-bold text-gray-800">350+</p>
+                            <p class="text-gray-600">Clients Satisfaits</p>
+                        </div>
+                    </div>
+                    <button
+                        class="mt-8 px-8 py-3 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition">Choisissez-moi</button>
+                </div>
+            </div>
+        </section>
+
+        <!--Portfolio-->
+        <section class="pb-10">
+            <div class="banner-container">
+                <div class="banner"></div>
+            </div>
+            <div class="container mx-auto px-4 py-8">
+                <div class="flex justify-between">
+                    <h2 class="text-4xl font-bold text-center">
+                        Mon <span class="text-orange-500">Portfolio</span>
+                    </h2>
+                    <p class="text-xl text-white font-700 text-center p-3 bg-primary rounded-full mb-5">En voir plus.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Les projets seront ajoutés ici par JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+
+        <!--reach me-->
+        <section class="pt-10">
+            <div class="flex flex-col items-center p-12 bg-white space-y-10">
+                <h1 class="text-4xl md:text-6xl font-bold text-center text-zinc-800 ">
+                    Une idée de projet ? <span class="text-orange-500">Parlons-en !</span>
+                </h1>
+                <div class="mt-6 w-full max-w-lg">
+                    <div class="flex items-center border rounded-full p-4 space-x-4">
+                        <div class="flex items-center justify-center w-12 h-12 bg-orange-100 rounded-full">
+                            <img src="assets/svg/MAIL.png" alt="email icon" />
+                        </div>
+                        <input type="email" placeholder="Enter Email Address"
+                            class="flex-grow px-4 py-2 text-zinc-800 bg-transparent focus:outline-none" />
+                        <button
+                            class="px-8 py-3 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition">Send</button>
+                    </div>
+                </div>
+                <div class="flex justify-around w-full max-w-2xl mt-8 text-zinc-600 space-x-6">
+                    <div class="flex items-center space-x-2">
+                        <img src="assets/svg/star.svg" alt="ratings icon" />
+                        <span class="text-lg">4.9/5 note moyenne</span>
+                    </div>
+
+                    <div class="flex items-center space-x-2">
+                        <img src="assets/svg/shield-tick.svg" alt="certified icon" />
+                        <span class="text-lg">Certifié</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-zinc-800 text-white p-6 rounded-t-lg flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center justify-between gap-10">
+                <h2 class="text-2xl font-semibold">Une idée, un projet, une envie ?</h2>
+                <a href="mailto:julien.castro@protonmail.com"
+                    class="bg-orange-500 text-white py-2 px-4 rounded-lg flex items-center transition transform hover:scale-105 hover:bg-orange-600">
+                    Engage moi <span class="ml-2">↗</span>
+                </a>
+            </div>
+            <div class="gap-5">
+                <a href="https://www.linkedin.com" target="_blank" class="transition transform hover:scale-200">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                        alt="LinkedIn" class="inline-block w-6 h-6">
+                </a>
+                <a href="mailto:julien.castro@protonmail.com" class="transition transform hover:scale-200">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email"
+                        class="inline-block w-6 h-6">
+                </a>
+            </div>
+            <div>
+                <p class="text-center">Je me suis inspiré de ce <a
+                        href="https://www.figma.com/community/file/1299737213921915682" class="text-primary">Design</a>
+                </p>
+                <p class="text-center">© 2024 <a href="https://www.linkedin.com/in/julien-castro/"
+                        class="text-center text-primary">Julien Castro.</a> Tous droits réservés.</p>
+
+            </div>
+    </div>
+    </footer>
 
     </div>
     <script type="module" src="./main.js"></script>

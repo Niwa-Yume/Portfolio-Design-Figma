@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Satoshi';
-    src: url('assets/Fonts/WEB/fonts/Satoshi-Black.ttf') format('ttf'),
+    src: url('assets/Fonts/WEB/fonts/Satoshi-Black.ttf') format('ttf');
 }
 
 @tailwind base;
@@ -13,7 +13,6 @@ body {
     font-family: 'Satoshi', sans-serif;
     height: 100vh;
 }
-
 
 .glass-effect {
     background: rgba(255, 255, 255, 0.2);
@@ -33,32 +32,42 @@ body {
 }
 
 #section-service {
-    height: 100vh;
+    height: 70vh;
     background-image: url('assets/images/service/fond-noit-orange.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
+    position: relative;
+    border-radius: 50px; /* Adding more rounded corners */
+    overflow: hidden; /* Ensure the background doesn't exceed the borders */
 }
 
 .image-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.svg-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50px; /* Ensure the images follow the rounded corners */
+}
+
+.svg-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the SVG covers the container */
     opacity: 0;
-    animation: fade 4s infinite;
+    animation: fade 6s infinite;
+    top: 0;
+    left: 0;
+    border-radius: 50px; /* Match the section's border-radius */
 }
 
 .svg-image:nth-child(2) {
-    animation-delay: 2s;
+    animation-delay: 3s;
 }
 
 @keyframes fade {
@@ -67,5 +76,37 @@ body {
     }
     50% {
         opacity: 1;
+    }
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 150px; /* Adjust according to your image height */
+    overflow: hidden;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.banner {
+    position: absolute;
+    width: 200%; /* Adjust to ensure the image covers the container */
+    height: 200%; /* Adjust to ensure the image covers the container */
+    background-size: contain;
+    background-position: center;
+    animation: slide 10s infinite linear;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(-50%, -50%);
+        background-image: url('assets/images/banner/Property 1=Frame 326.png');
+    }
+    50% {
+        transform: translate(50%, 50%);
+        background-image: url('assets/images/banner/Property 1=Frame 327.png');
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        background-image: url('assets/images/banner/Property 1=Frame 326.png');
     }
 }

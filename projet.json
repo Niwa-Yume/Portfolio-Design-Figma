@@ -1,0 +1,21 @@
+[
+    {
+      "title": "Noctinium",
+      "date": "2023",
+      "tags": ["HTML", "CSS", "JavaScript,PHP,MySQL"],
+      "category": "site web",
+      "image": "assets/images/Julien_CASTRO-removebg-preview.png",
+      "description": "Projet personnel de site web pour référencer les soirées nocturnes de Genève et on en organise aussi.",
+      "link": "https://noctinium.com"
+    },
+    {
+      "title": "Projet 2",
+      "date": "2024-02-01",
+      "tags": ["Python", "Django"],
+      "category": "Web Development",
+      "image": "https://placehold.co/500x300",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "link": "#"
+    }
+  ]
+  
