@@ -10,14 +10,17 @@
         .icon-img {
             border-radius: 4px;
         }
+
         .project-card {
             max-width: 300px;
             margin: auto;
             border-radius: 12px;
         }
+
         .bg-tertiary {
             background-color: #FEB273;
         }
+
         .bg-primary {
             background-color: #FEB273;
         }
@@ -27,20 +30,15 @@
 <body class="bg-zinc-100 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">
     <div class="min-h-screen p-4">
         <nav class="mx-5 mt-10">
-            <ul class="flex justify-between items-center border rounded-full p-2 bg-tertiary text-white text-lg transition">
-                <li class="bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="../#">Accueil</a></li>
-                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="../index.html">A propos</a></li>
-                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="../">Service</a></li>
-                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="../">CV</a></li>
-                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="../projects/index.html">Projet</a></li>
-                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="../">Contact</a></li>
+            <ul class="flex justify-between items-center border rounded-full p-2 bg-tertariy text-white text-lg transition">
+                <li class="bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/#">Accueil</a></li>
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">A propos</a></li>
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">Service</a></li>
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">CV</a></li>
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/projet/index.html">Projet</a></li>
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">Contact</a></li>
             </ul>
         </nav>
-        <header class="flex justify-between items-center bg-white dark:bg-zinc-800 p-4 shadow-md mt-4">
-            <div class="text-sm text-zinc-500 dark:text-zinc-400">
-                ANALOGUE IS AN INDEPENDENT DESIGN AGENCY SPECIALIZED IN CONTENT, WEB
-            </div>
-        </header>
         <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8" id="projects-grid">
             <!-- Projects will be loaded here dynamically -->
         </main>
