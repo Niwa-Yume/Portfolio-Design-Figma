@@ -1,21 +1,65 @@
 [
-    {
-      "title": "Noctinium",
-      "date": "2023",
-      "tags": ["HTML", "CSS", "JavaScript,PHP,MySQL"],
-      "category": "site web",
-      "image": "assets/images/Julien_CASTRO-removebg-preview.png",
-      "description": "Projet personnel de site web pour référencer les soirées nocturnes de Genève et on en organise aussi.",
-      "link": "https://noctinium.com"
-    },
-    {
-      "title": "Projet 2",
-      "date": "2024-02-01",
-      "tags": ["Python", "Django"],
-      "category": "Web Development",
-      "image": "https://placehold.co/500x300",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "link": "#"
-    }
-  ]
-  
+  {
+    "title": "Noctinium",
+    "date": "2023",
+    "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    "category": "site web",
+    "image": "assets/images/Julien_CASTRO-removebg-preview.png",
+    "description": "Projet personnel de site web pour référencer les soirées nocturnes de Genève et on en organise aussi.",
+    "link": "https://noctinium.com"
+  },
+  {
+    "title": "Script de scrapping",
+    "date": "2023",
+    "tags": ["Python", "Scrapy"],
+    "category": "Script",
+    "image": "https://placehold.co/500x300",
+    "description": "Script qui récupère des informations sur un site web pour les stocker dans un Excel et une base de données.",
+    "link": "#"
+  },
+  {
+    "title": "Bot de Crawling Scrapy",
+    "date": "2023",
+    "tags": ["Python", "Scrapy"],
+    "category": "Bot",
+    "image": "https://placehold.co/500x300",
+    "description": "Bot qui récupère des informations sur plusieurs sites web, les traite et les stocke dans une base de données.",
+    "link": "#"
+  },
+  {
+    "title": "Application météo API",
+    "date": "2023",
+    "tags": ["HTML", "CSS", "JavaScript", "API"],
+    "category": "Application",
+    "image": "https://placehold.co/500x300",
+    "description": "Application qui récupère et affiche des informations météorologiques pour une ville sur une page web.",
+    "link": "#"
+  },
+  {
+    "title": "Portefolio TailwindCSS",
+    "date": "2023",
+    "tags": ["HTML", "CSS", "TailwindCSS"],
+    "category": "Portfolio",
+    "image": "https://placehold.co/500x300",
+    "description": "Projet de portefolio réalisé avec TailwindCSS.",
+    "link": "#"
+  },
+  {
+    "title": "Bot telegram",
+    "date": "2023",
+    "tags": ["Python", "Telegram"],
+    "category": "Bot",
+    "image": "https://placehold.co/500x300",
+    "description": "Bot telegram lié à la ville de Genève qui donne des informations sur la ville et ses transports.",
+    "link": "#"
+  },
+  {
+    "title": "Club des bergers belges",
+    "date": "2023",
+    "tags": ["WordPress"],
+    "category": "site web",
+    "image": "https://placehold.co/500x300",
+    "description": "Site web pour un club de bergers belges, premier mandat pour le club.",
+    "link": "#"
+  }
+]
