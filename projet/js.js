@@ -20,14 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             projects.forEach(project => {
                 const projectCard = document.createElement('div');
-                projectCard.classList.add('project-card', 'text-center', 'bg-white', 'dark:bg-zinc-800', 'rounded-lg', 'shadow-md', 'overflow-hidden', 'p-4', 'm-2');
+                projectCard.classList.add('project-card', 'text-center', 'bg-white', 'rounded-full', 'shadow-md', 'overflow-hidden', 'p-4', 'm-2');
                 projectCard.innerHTML = `
-                    <img src="${project.image}" alt="${project.title}" class="rounded-lg mx-auto w-full h-48 object-cover">
-                    <h3 class="mt-4 text-lg font-semibold text-zinc-800 dark:text-zinc-200">${project.title}</h3>
+                    <img src="${project.image}" alt="${project.title}" class="rounded-full mx-auto w-full h-48 object-contain">
+                    <h3 class="mt-4 text-lg font-semibold text-black">${project.title}</h3>
+                    <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">${project.description}</p>
                     <div class="flex flex-wrap justify-center gap-2 mt-2">
-                        ${project.tags.map(tag => `<span class="inline-block p-1 bg-zinc-200 dark:bg-zinc-700 rounded-md">${techIcons[tag] || tag}</span>`).join('')}
+                        ${project.tags.map(tag => `<span class="inline-block p-1 bg-zinc-200  rounded-md">${techIcons[tag] || tag}</span>`).join('')}
                     </div>
-                    <a href="${project.link}" class="text-white mt-4 block bg-primary py-2 px-4 rounded-full">Voir plus</a>
+                    <a href="${project.link}" class="text-white mt-4 block bg-primary py-2 px-4 rounded-full w-fit mx-auto">Voir plus</a>
                 `;
                 projectsGrid.appendChild(projectCard);
             });

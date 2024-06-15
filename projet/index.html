@@ -8,20 +8,25 @@
     <link rel="stylesheet" href="../output.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../tailwind.config.js">
+    <style>
+        body {
+            background: conic-gradient(from .5turn at 50% 110%, white, orange)
+        }
+    </style>
 </head>
 
-<body class="bg-zinc-100  text-zinc-900 ">
+<body class="bg-zinc-100 text-zinc-900">
     <div class="min-h-screen p-4">
-        <nav class="mx-5 mt-10">
+        <nav class="mx-auto mt-10 w-2/3">
             <ul
-                class="flex justify-between items-center border rounded-full p-2 bg-black text-white text-lg transition">
-                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="../index.html">Accueil</a></li>
+                class="flex justify-between items-center border rounded-full p-2 bg-tertariy text-white text-lg transition">
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/#">Accueil</a></li>
                 <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">Service</a></li>
-                <li class="bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="index.html">Projet</a></li>
-                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="../contact/index.html">Contact</a></li>
+                <li class="bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/projet/index.html">Projet</a></li>
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/contact/index.html">Contact</a></li>
             </ul>
         </nav>
-        <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8" id="projects-grid">
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8" id="projects-grid">
             <!-- Projects will be loaded here dynamically -->
         </main>
     </div>
