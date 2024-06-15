@@ -4,7 +4,7 @@
     "date": "2023",
     "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     "category": "site web",
-    "image": "assets/image projet/noctinium.png",
+    "image": "/assets/image projet/noctinium.png",
     "description": "Projet personnel de site web pour référencer les soirées nocturnes de Genève et on en organise aussi.",
     "link": "https://noctinium.com"
   },
@@ -13,7 +13,7 @@
     "date": "2023",
     "tags": ["Python", "Scrapy"],
     "category": "Script",
-    "image": "assets/image projet/web scrapping.png",
+    "image": "/assets/image projet/web scrapping.png",
     "description": "Script qui récupère des informations sur un site web pour les stocker dans un Excel et une base de données.",
     "link": "https://github.com/Niwa-Yume/Bot-scrapy"
   },
@@ -22,7 +22,7 @@
     "date": "2023",
     "tags": ["HTML", "CSS"],
     "category": "site web",
-    "image": "assets/image projet/scoubi fog.png",
+    "image": "/assets/image projet/scoubi fog.png",
     "description": "Mon tout premier portefolio réalisé en HTML et CSS.",
     "link": "https://niwa-yume.github.io/Portefolio_HTML_CSS/"
   },
@@ -31,7 +31,7 @@
     "date": "2023",
     "tags": ["HTML", "CSS", "TailwindCSS"],
     "category": "Portfolio",
-    "image": "assets/image projet/portefolio-tailwindcss.png",
+    "image": "/assets/image projet/portefolio-tailwindcss.png",
     "description": "Projet de portefolio réalisé avec TailwindCSS.",
     "link": "https://niwa-yume.github.io/Portefolio-tailwindcss/"
   },
@@ -40,7 +40,7 @@
     "date": "2023",
     "tags": ["Python", "Telegram"],
     "category": "Bot",
-    "image": "assets/image projet/bot telegram.jpg",
+    "image": "/assets/image projet/bot telegram.jpg",
     "description": "Bot telegram lié à la ville de Genève qui donne des informations sur la ville et ses transports.",
     "link": "https://github.com/Niwa-Yume/Geneva-bot"
   },
@@ -49,7 +49,7 @@
     "date": "2023",
     "tags": ["WordPress"],
     "category": "site web",
-    "image": "assets/image projet/berger-belge.png",
+    "image": "/assets/image projet/berger-belge.png",
     "description": "Site web pour le club de bergers belges, le but était de montrer les activités du club et les chiens du club.",
     "link": "https://bergerbelgegeneve.ch/"
   },
@@ -58,7 +58,7 @@
     "date": "2024",
     "tags": ["WordPress"],
     "category": "site web",
-    "image": "assets/image projet/scoubi fog.png",
+    "image": "/assets/image projet/scoubi fog.png",
     "description": "Site web pour une dresseuse de chien, le but était de montrer ses services et ces certifications.",
     "link": "https://scoubi-dog.ch/"
   }

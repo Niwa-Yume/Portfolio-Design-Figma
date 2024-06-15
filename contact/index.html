@@ -6,111 +6,85 @@
     <link rel="icon" type="image/svg+xml" href="./assets/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="../output.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com/"></script>
 </head>
 
-<body>
-    <div id="app">
-        <nav class="mx-5 mt-10">
-            <ul
-                class="flex justify-between items-center border rounded-full p-2 bg-tertariy text-white text-lg transition">
+
+<body class="bg-gray-100 h-screen overflow-hidden fond-anime">
+    <div id="app" class="flex flex-col h-full fond-anime">
+        <nav class="mx-5 mt-10 flex-shrink-0">
+            <ul class="flex justify-between items-center border rounded-full p-2 bg-black text-white text-lg transition">
                 <li class="bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/#">Accueil</a></li>
-                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">A propos</a></li>
                 <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">Service</a></li>
-                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">CV</a></li>
                 <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/projet/index.html">Projet</a></li>
                 <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/contact.html">Contact</a></li>
             </ul>
         </nav>
 
-        <section class="max-w-2xl mx-auto p-4 mt-10">
-            <h1 class="text-3xl font-bold mb-4">
-                Love to hear from you, <br />
-                Get in touch
-                <img
-                    src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png"
-                    alt="Waving Hand"
-                    width="25"
-                    height="25" />
-            </h1>
-            <form class="space-y-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-zinc-700">Your name</label>
-                        <input type="text" id="name" name="name" placeholder="Edward Snowden"
-                            class="mt-1 block w-full p-2 border border-zinc-300 rounded-md" />
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-zinc-700">Your email</label>
-                        <input type="email" id="email" name="email" placeholder="itanexmple@gmail.com"
-                            class="mt-1 block w-full p-2 border border-zinc-300 rounded-md" />
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label for="interest" class="block text-sm font-medium text-zinc-700">What you are interested</label>
-                        <select id="interest" name="interest" class="mt-1 block w-full p-2 border border-zinc-300 rounded-md">
-                            <option>Design & Branding</option>
-                            <option>Web Development</option>
-                            <option>SEO</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="budget" class="block text-sm font-medium text-zinc-700">Project Budget</label>
-                        <select id="budget" name="budget" class="mt-1 block w-full p-2 border border-zinc-300 rounded-md">
-                            <option>Select your budget</option>
-                            <option>$500 - $1000</option>
-                            <option>$1000 - $5000</option>
-                            <option>$5000+</option>
-                        </select>
-                    </div>
+        <section class="flex items-center justify-center flex-grow p-4">
+            <div class="max-w-2xl w-full p-8 shadow-2xl rounded-lg bg-white">
+                <div class="text-center">
+                    <h1 class="text-3xl font-bold mb-4">
+                        J'adorerais avoir de vos nouvelles,<br />
+                        Contactez-moi <span class="text-primary">!</span>
+                    </h1>
+                    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png"
+                        alt="Waving Hand" width="50" height="50" class="mx-auto" />
                 </div>
 
-                <div>
-                    <label for="message" class="block text-sm font-medium text-zinc-700">Message</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Let tell us know your project about"
-                        class="mt-1 block w-full p-2 border border-zinc-300 rounded-md"></textarea>
-                </div>
+                <form class="space-y-4 mt-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-zinc-700">Votre Nom</label>
+                            <input type="text" id="name" name="name" placeholder="Edward Snowden"
+                                class="mt-1 block w-full p-2 border border-zinc-300 rounded-md" />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-zinc-700">Votre email</label>
+                            <input type="email" id="email" name="email" placeholder="itanexmple@gmail.com"
+                                class="mt-1 block w-full p-2 border border-zinc-300 rounded-md" />
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="interest" class="block text-sm font-medium text-zinc-700">Ce qui vous intéresse</label>
+                            <select id="interest" name="interest"
+                                class="mt-1 block w-full p-2 border border-zinc-300 rounded-md">
+                                <option>Création de site web</option>
+                                <option>Création de bot</option>
+                                <option>Analyse des besoins</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="budget" class="block text-sm font-medium text-zinc-700">Budget du Projet</label>
+                            <select id="budget" name="budget"
+                                class="mt-1 block w-full p-2 border border-zinc-300 rounded-md">
+                                <option>Sélectionnez votre budget</option>
+                                <option>500 CHF - 1000 CHF</option>
+                                <option>1000 CHF - 5000 CHF</option>
+                                <option>+5000 CHF</option>
+                            </select>
+                        </div>
+                    </div>
 
-                <div>
-                    <button type="submit"
-                        class="w-full bg-black text-white py-2 rounded-md flex items-center justify-center">
-                        Just Send <span class="ml-2">↗</span>
-                    </button>
-                </div>
-            </form>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-zinc-700">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Donner moi des détails sur votre projet ici..."
+                            class="mt-1 block w-full p-2 border border-zinc-300 rounded-md"></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit"
+                            class="w-full bg-primary text-white py-2 rounded-md flex items-center justify-center">
+                            Envoyer <span class="ml-2">↗</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </section>
-
-        <footer class="bg-zinc-800 text-white p-6 rounded-t-lg flex-col md:flex-row justify-between items-center mt-10">
-            <div class="flex items-center justify-between gap-10">
-                <h2 class="text-2xl font-semibold">Une idée, un projet, une envie ?</h2>
-                <a href="mailto:julien.castro@protonmail.com"
-                    class="bg-orange-500 text-white py-2 px-4 rounded-lg flex items-center transition transform hover:scale-105 hover:bg-orange-600">
-                    Engage moi <span class="ml-2">↗</span>
-                </a>
-            </div>
-            <div class="gap-5">
-                <a href="https://www.linkedin.com" target="_blank" class="transition transform hover:scale-200">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                        alt="LinkedIn" class="inline-block w-6 h-6">
-                </a>
-                <a href="mailto:julien.castro@protonmail.com" class="transition transform hover:scale-200">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email"
-                        class="inline-block w-6 h-6">
-                </a>
-            </div>
-            <div>
-                <p class="text-center">Je me suis inspiré de ce <a
-                        href="https://www.figma.com/community/file/1299737213921915682" class="text-primary">Design</a>
-                </p>
-                <p class="text-center">© 2024 <a href="https://www.linkedin.com/in/julien-castro/"
-                        class="text-center text-primary">Julien Castro.</a> Tous droits réservés.</p>
-            </div>
-        </footer>
     </div>
-    <script type="module" src="./main.js"></script>
+    <script type="module" src=""></script>
 </body>
 
 </html>
