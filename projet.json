@@ -61,5 +61,13 @@
     "image": "/assets/image projet/scoubi fog.png",
     "description": "Site web pour une dresseuse de chien, le but était de montrer ses services et ces certifications.",
     "link": "https://scoubi-dog.ch/"
+  },{
+    "title": "Petit Onion",
+    "date": "2024",
+    "tags": ["TailwindCSS", "Laravel", "JavaScript", "PHP", "MySQL"],
+    "category": "site web",
+    "image": "/assets/image projet/petit-onion.png",
+    "description": "Site web pour Petit Onion, un projet de recettes de cuisine mettant en avant des recettes faciles et délicieuses. Nous avons 1 mois pour réaliser ce projet de la DA à la mise en ligne et communication sur le projet.",
+    "link": "https://www.petitonion.com"
   }
 ]
