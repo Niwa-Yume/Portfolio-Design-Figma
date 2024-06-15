@@ -22,20 +22,33 @@
         }
 
         .bg-primary {
-            background-color: #FEB273;
+            background-color: #FF8C00; /* Change to desired primary color */
+        }
+
+        .nav-item a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 0.75rem 1.25rem;
+            border-radius: 1.5rem;
+        }
+
+        .nav-item a:hover {
+            background-color: #FF8C00; /* Match primary color */
         }
     </style>
 </head>
 
-<body class="bg-zinc-100 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">
+<body class="bg-zinc-100  text-zinc-900 ">
     <div class="min-h-screen p-4">
         <nav class="mx-5 mt-10">
-            <ul class="flex justify-between items-center border rounded-full p-2 bg-tertariy text-white text-lg transition">
-                <li class="bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/#">Accueil</a></li>
+            <ul
+                class="flex justify-between items-center border rounded-full p-2 bg-black text-white text-lg transition">
+                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="../index.html">Accueil</a></li>
                 <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">A propos</a></li>
                 <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">Service</a></li>
                 <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">CV</a></li>
-                <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/projet/index.html">Projet</a></li>
+                <li class="bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="index.html">Projet</a></li>
                 <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="/">Contact</a></li>
             </ul>
         </nav>

@@ -2,6 +2,8 @@
 export default {
   content: [
     "./index.html",
+    "./projet/index.html",
+    "./contact/index.html",
   ],
   theme: {
     extend: {
