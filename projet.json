@@ -69,5 +69,13 @@
     "image": "/assets/image projet/petit-onion.png",
     "description": "Site web pour Petit Onion, un projet de recettes de cuisine mettant en avant des recettes faciles et délicieuses. Nous avons 1 mois pour réaliser ce projet de la DA à la mise en ligne et communication sur le projet.",
     "link": "https://www.petitonion.com"
+  },{
+    "title": "App météo API + BOT AI",
+    "date": "2024",
+    "tags": ["API", "Python", "Telegram"],
+    "category": "Bot",
+    "image": "/assets/image projet/app-meteo.png",
+    "description": "Bot telegram qui donne la météo de la ville demandée et qui peut aussi répondre à des questions sur la météo.",
+    "link": "https://niwa-yume.github.io/premiere-app-meteo/"
   }
 ]

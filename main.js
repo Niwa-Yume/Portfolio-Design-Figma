@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Ajout dynamique des projets de portfolio
 document.addEventListener('DOMContentLoaded', () => {
-    const projectNames = ["Petit Onion", "Scoubi dog maitre chien", "Portefolio TailwindCSS"]; // Remplacez ces noms par ceux de vos projets
+    const projectNames = ["Petit Onion", "Scoubi dog maitre chien", "app météo API + BOT AI"]; // Remplacez ces noms par ceux de vos projets
     fetch('./projet.json')
         .then(response => response.json())
         .then(projects => {
@@ -42,9 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">${project.description}</p>
                     <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400"><strong>Date:</strong> ${project.date}</p>
                     <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400"><strong>Catégorie:</strong> ${project.category}</p>
-                    <div class="flex flex-wrap justify-center gap-2 mt-2">
-                        ${project.tags.map(tag => `<span class="inline-block p-1 bg-zinc-200 dark:bg-zinc-700 rounded-md">${tag}</span>`).join('')}
-                    </div>
                     <a href="${project.link}" class="text-white mt-4 block bg-primary py-2 px-4 rounded-full hover:bg-primary-light">Voir plus</a>
                 `;
                 projectsGrid.appendChild(projectCard);
