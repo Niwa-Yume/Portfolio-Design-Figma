@@ -1,6 +1,5 @@
-//Ecoute pour le bouton de contact
-
 document.addEventListener('DOMContentLoaded', function () {
+    // Gestion des boutons de contact et portfolio
     const portfolioBtn = document.getElementById('portfolio-btn');
     const contactBtn = document.getElementById('contact-btn');
     const svgPortfolio = document.querySelector('.svg-portfolio');
@@ -21,127 +20,35 @@ document.addEventListener('DOMContentLoaded', function () {
         svgPortfolio.classList.remove('hidden');
 
         contactBtn.classList.remove('bg-primary', 'text-white');
-        svgContact.classList.add('hidden');
-    });
-});
-
-//Ajout dynamique des projets de portefolio
-document.addEventListener('DOMContentLoaded', function () {
-    const portfolioBtn = document.getElementById('portfolio-btn');
-    const contactBtn = document.getElementById('contact-btn');
-    const svgPortfolio = document.querySelector('.svg-portfolio');
-    const svgContact = document.querySelector('.svg-contact');
-
-    contactBtn.addEventListener('mouseover', function () {
-        portfolioBtn.classList.remove('bg-primary', 'text-white');
-        portfolioBtn.classList.add('bg-transparent');
-        svgPortfolio.classList.add('hidden');
-
-        contactBtn.classList.add('bg-primary', 'text-white');
-        svgContact.classList.remove('hidden');
-    });
-
-    contactBtn.addEventListener('mouseout', function () {
-        portfolioBtn.classList.add('bg-primary', 'text-white');
-        portfolioBtn.classList.remove('bg-transparent');
-        svgPortfolio.classList.remove('hidden');
-
-        contactBtn.classList.remove('bg-primary', 'text-white');
-        svgContact.classList.add('hidden');
-    });
-});
-
-// Écoute pour le bouton de contact
-
-document.addEventListener('DOMContentLoaded', function () {
-    const boutonPortfolio = document.getElementById('portfolio-btn');
-    const boutonContact = document.getElementById('contact-btn');
-    const svgPortfolio = document.querySelector('.svg-portfolio');
-    const svgContact = document.querySelector('.svg-contact');
-
-    boutonContact.addEventListener('mouseover', function () {
-        boutonPortfolio.classList.remove('bg-primary', 'text-white');
-        boutonPortfolio.classList.add('bg-transparent');
-        svgPortfolio.classList.add('hidden');
-
-        boutonContact.classList.add('bg-primary', 'text-white');
-        svgContact.classList.remove('hidden');
-    });
-
-    boutonContact.addEventListener('mouseout', function () {
-        boutonPortfolio.classList.add('bg-primary', 'text-white');
-        boutonPortfolio.classList.remove('bg-transparent');
-        svgPortfolio.classList.remove('hidden');
-
-        boutonContact.classList.remove('bg-primary', 'text-white');
         svgContact.classList.add('hidden');
     });
 });
 
 // Ajout dynamique des projets de portfolio
-document.addEventListener('DOMContentLoaded', function () {
-    const boutonPortfolio = document.getElementById('portfolio-btn');
-    const boutonContact = document.getElementById('contact-btn');
-    const svgPortfolio = document.querySelector('.svg-portfolio');
-    const svgContact = document.querySelector('.svg-contact');
-
-    boutonContact.addEventListener('mouseover', function () {
-        boutonPortfolio.classList.remove('bg-primary', 'text-white');
-        boutonPortfolio.classList.add('bg-transparent');
-        svgPortfolio.classList.add('hidden');
-
-        boutonContact.classList.add('bg-primary', 'text-white');
-        svgContact.classList.remove('hidden');
-    });
-
-    boutonContact.addEventListener('mouseout', function () {
-        boutonPortfolio.classList.add('bg-primary', 'text-white');
-        boutonPortfolio.classList.remove('bg-transparent');
-        svgPortfolio.classList.remove('hidden');
-
-        boutonContact.classList.remove('bg-primary', 'text-white');
-        svgContact.classList.add('hidden');
-    });
-});
-
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("DOM entièrement chargé et analysé");
+    const projectNames = ["Noctinium", "Scoubi dog maitre chien", "Portefolio TailwindCSS"]; // Remplacez ces noms par ceux de vos projets
+    fetch('./projet.json')
+        .then(response => response.json())
+        .then(projects => {
+            const selectedProjects = projects.filter(project => projectNames.includes(project.title));
+            const projectsGrid = document.getElementById('projects-grid');
 
-    fetch('./projet.json') // Chemin pour accéder au fichier projet.json qui contient les données des projets
-        .then(response => {
-            console.log("Récupération de projects.json...");
-            if (!response.ok) {
-                throw new Error('La réponse du réseau n\'était pas correcte ' + response.statusText);
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log("Données des projets chargées: ", data);
-            const conteneurPortfolio = document.querySelector('.grid');
-            if (!conteneurPortfolio) {
-                console.error("Conteneur de portfolio non trouvé");
-                return;
-            }
-            data.forEach(projet => {
-                const projetHTML = `
-                <div class="bg-slate-500 rounded-lg shadow-xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
-                    <img src="${projet.image}" alt="${projet.title}" class="w-full h-64 object-cover transition-opacity hover:opacity-80 duration-300">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold text-gray-800 transition-colors text-center hover:text-orange-500 duration-300">${projet.title}</h3>
-                        <p class="mt-2 text-gray-500">${projet.description}</p>
-                        <p class="mt-2 text-gray-500">Date: ${projet.date}</p>
-                        <p class="mt-2 text-gray-500">Catégorie: ${projet.category}</p>
-                        <p class="mt-2 text-gray-500 font-bold">Tags: ${projet.tags.join(', ')}</p>
-                        <button class="mx-auto text-center mt-4 px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition duration-300">
-                        <a href="${projet.link}">Lien du projet</a></button>
+            selectedProjects.forEach(project => {
+                const projectCard = document.createElement('div');
+                projectCard.classList.add('project-card', 'text-center', 'bg-white', 'dark:bg-zinc-800', 'rounded-xl', 'shadow-md', 'overflow-hidden', 'p-4', 'm-2', 'transition-transform', 'transform', 'hover:scale-105', 'duration-300','justify-center','items-center','flex-col');
+                projectCard.innerHTML = `
+                    <img src="${project.image}" alt="${project.title}" class=" mx-auto w-full h-48 object-contain">
+                    <h3 class="mt-4 text-lg font-semibold text-zinc-800 dark:text-zinc-200">${project.title}</h3>
+                    <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">${project.description}</p>
+                    <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400"><strong>Date:</strong> ${project.date}</p>
+                    <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400"><strong>Catégorie:</strong> ${project.category}</p>
+                    <div class="flex flex-wrap justify-center gap-2 mt-2">
+                        ${project.tags.map(tag => `<span class="inline-block p-1 bg-zinc-200 dark:bg-zinc-700 rounded-md">${tag}</span>`).join('')}
                     </div>
-                </div>
+                    <a href="${project.link}" class="text-white mt-4 block bg-primary py-2 px-4 rounded-full hover:bg-primary-light">Voir plus</a>
                 `;
-                conteneurPortfolio.insertAdjacentHTML('beforeend', projetHTML);
-            });            
+                projectsGrid.appendChild(projectCard);
+            });
         })
-        .catch(error => console.error('Erreur lors du chargement des projets:', error));
+        .catch(error => console.error('Erreur lors de la récupération des projets:', error));
 });
-
-
-
