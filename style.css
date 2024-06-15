@@ -88,28 +88,30 @@ body {
 }
 
 .banner {
-    position: absolute;
-    width: 200%; /* Adjust to ensure the image covers the container */
-    height: 200%; /* Adjust to ensure the image covers the container */
-    background-size: contain;
-    background-position: center;
-    animation: slide 10s infinite linear;
+    display: flex;
+    width: 200%; /* Twice the width to fit both images side by side */
+    height: 100%;
+    animation: slide 10s infinite alternate;
+}
+
+.banner img {
+    width: 50%; /* Each image takes half the width of the container */
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
 }
 
 @keyframes slide {
     0% {
-        transform: translate(-50%, -50%);
-        background-image: url('assets/images/banner/Property 1=Frame 326.png');
+        transform: translateX(0);
     }
-    50% {
-        transform: translate(50%, 50%);
-        background-image: url('assets/images/banner/Property 1=Frame 327.png');
+    25% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-50%);
     }
     100% {
-        transform: translate(-50%, -50%);
-        background-image: url('assets/images/banner/Property 1=Frame 326.png');
+        transform: translateX(0);
     }
 }
-
-
-
