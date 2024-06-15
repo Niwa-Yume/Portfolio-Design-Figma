@@ -91,7 +91,8 @@ body {
     display: flex;
     width: 200%; /* Twice the width to fit both images side by side */
     height: 100%;
-    animation: slide 10s infinite alternate;
+    animation: slide 10s infinite;
+    animation-direction: alternate;
 }
 
 .banner img {
@@ -107,7 +108,9 @@ body {
     25% {
         transform: translateX(-50%);
     }
-
+    50% {
+        transform: translateX(0);
+    }
     75% {
         transform: translateX(-50%);
     }
