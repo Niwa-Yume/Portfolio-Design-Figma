@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Ajout dynamique des projets de portfolio
 document.addEventListener('DOMContentLoaded', () => {
-    const projectNames = ["Petit Onion", "Scoubi dog maitre chien", "app météo API + BOT AI"]; // Remplacez ces noms par ceux de vos projets
+    const projectNames = ["Petit Onion", "Scoubi dog maitre chien", "App météo API + BOT AI"]; // Remplacez ces noms par ceux de vos projets
     fetch('./projet.json')
         .then(response => response.json())
         .then(projects => {
