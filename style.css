@@ -60,7 +60,7 @@ body {
     height: 100%;
     object-fit: cover; /* Ensure the SVG covers the container */
     opacity: 0;
-    animation: fade 6s infinite;
+    animation: fade 6s infinite alternate;
     top: 0;
     left: 0;
     border-radius: 50px; /* Match the section's border-radius */
@@ -74,7 +74,7 @@ body {
     0%, 100% {
         opacity: 0;
     }
-    50% {
+    25%, 50% {
         opacity: 1;
     }
 }
