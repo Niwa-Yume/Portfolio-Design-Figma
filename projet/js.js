@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Python": '<img src="https://cdn-icons-png.flaticon.com/512/919/919852.png" alt="Python Icon" class="icon-img" width="25" height="25" />',
                 "Django": '<img src="https://cdn-icons-png.flaticon.com/512/919/919831.png" alt="Django Icon" class="icon-img" width="25" height="25" />',
                 "API": '<img src="https://cdn-icons-png.flaticon.com/512/2906/2906260.png" alt="API Icon" class="icon-img" width="25" height="25" />',
-                "TailwindCSS": '<img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="TailwindCSS Icon" class="icon-img" width="25" height="25" />',
+                "TailwindCSS": '<img src="../assets/icon tools/tailwindcss-icon.svg" alt="Tailwind CSS" class="w-8 h-8">',
                 "Telegram": '<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram Icon" class="icon-img" width="25" height="25" />',
                 "WordPress": '<img src="https://cdn-icons-png.flaticon.com/512/174/174881.png" alt="WordPress Icon" class="icon-img" width="25" height="25" />',
                 "Laravel": '<img src="/assets/icon/laravel.svg" alt="WordPress Icon" class="icon-img" width="25" height="25" />',
