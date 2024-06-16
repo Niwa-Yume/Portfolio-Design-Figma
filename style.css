@@ -1,9 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0");
-
-@font-face {
-    font-family: 'Satoshi';
-    src: url('assets/Fonts/WEB/fonts/Satoshi-Black.ttf') format('ttf');
-}
+/* Existing CSS imports and font-face omitted for brevity */
 
 @tailwind base;
 @tailwind components;
@@ -60,7 +55,7 @@ body {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    animation: fade 6s infinite alternate;
+    animation: fade 6s infinite;
     top: 0;
     left: 0;
     border-radius: 50px;
@@ -74,7 +69,7 @@ body {
     0%, 100% {
         opacity: 0;
     }
-    25%, 50% {
+    50% {
         opacity: 1;
     }
 }
@@ -89,21 +84,45 @@ body {
 
 .banner {
     display: flex;
-    width: calc(200% - 10px); /* Adjust width to account for both images and a small gap */
+    width: 150%;
     height: 100%;
-    animation: slide 10s infinite linear;
+    animation: marquee 10s linear infinite;
 }
 
 .banner img {
     width: 50%;
     height: 100%;
     object-fit: cover;
+    margin-right: -20px;
 }
 
-@keyframes slide {
+/* Added for the infinite marquee animation */
+.marquee-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.marquee {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-content {
+    display: flex;
+}
+
+.marquee img {
+    width: 20%;
+    margin-right: 10px;
+}
+
+@keyframes marquee {
     0% {
-        transform: translateX(0);
+        transform: translateX(0%);
     }
+
     100% {
         transform: translateX(-50%);
     }
