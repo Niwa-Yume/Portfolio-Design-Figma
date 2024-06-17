@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('./projet.json') // Utilisation d'un chemin absolu
-        .then(response => response.json())
+    fetch('/projet.json') // Utilisation d'un chemin absolu
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
         .then(projects => {
             const techIcons = {
                 "HTML": '<img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML Icon" class="icon-img" width="25" height="25" />',
