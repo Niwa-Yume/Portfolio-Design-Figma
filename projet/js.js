@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="flex flex-wrap justify-center gap-2 mt-4">
                             ${project.tags.map(tag => `<span class="inline-block p-2 bg-zinc-200 rounded-md">${techIcons[tag] || tag}</span>`).join('')}
                         </div>
-                        <a href="${project.link}" class="text-white mt-4 block bg-primary py-2 px-6 rounded-full w-fit mx-auto">Voir plus</a>
+                        <a href="${project.link}" class="text-white mt-4  bg-primary py-10 p-10 rounded-full w-fit mx-auto">Voir plus</a>
                     </div>
                 `;
                 projectsGrid.appendChild(projectCard);
