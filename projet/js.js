@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('/projet.json') // Utilisation d'un chemin absolu
+    fetch('projet.json') // Utilisation d'un chemin absolu
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
