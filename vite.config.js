@@ -12,7 +12,8 @@ export default defineConfig({
         contact: resolve(__dirname, 'contact/index.html'),
         service: resolve(__dirname, 'service-outil/index.html'),
         contact: resolve(__dirname, 'contact/index.html'),
-        dataprojet: resolve(__dirname, 'projet.json'),
+        dataprojet: resolve(__dirname, 'projet/projet.json'),
+        jsprojet: resolve(__dirname, 'projet/js.js'),
       }
     }
   }
