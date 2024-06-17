@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body class="bg-gray-100 min-h-screen fond-anime">
-    <div id="app" class="flex flex-col h-full fond-anime">
-        <nav class="mx-auto mt-10 w-3/12">
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <div id="app" class="flex-grow">
+        <nav class="mx-auto mt-10 w-fit">
             <ul class="flex justify-between items-center border rounded-full p-2 bg-tertariy text-white text-lg transition gap-10">
                 <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="../index.html">Accueil</a></li>
                 <li class="hover:bg-primary px-5 py-3 rounded-3xl m-1 nav-item"><a href="../service/index.html">Service</a></li>
@@ -85,35 +85,35 @@
                 </div>
             </div>
         </section>
-
-        <footer class="bg-zinc-800 text-white p-6 rounded-t-lg flex-col md:flex-row justify-between items-center mt-auto">
-            <div class="flex items-center justify-between gap-10">
-                <h2 class="text-2xl font-semibold">Une idée, un projet, une envie ?</h2>
-                <a href="mailto:julien.castro@protonmail.com"
-                    class="bg-orange-500 text-white py-2 px-4 rounded-lg flex items-center transition transform hover:scale-105 hover:bg-orange-600">
-                    Engage moi <span class="ml-2">↗</span>
-                </a>
-            </div>
-            <div class="gap-5 flex">
-                <a href="https://www.linkedin.com" target="_blank" class="transition transform hover:scale-200">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                        alt="LinkedIn" class="inline-block w-6 h-6">
-                </a>
-                <a href="mailto:julien.castro@protonmail.com" class="transition transform hover:scale-200">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email"
-                        class="inline-block w-6 h-6">
-                </a>
-            </div>
-            <div>
-                <p class="text-center">Je me suis inspiré de ce <a
-                        href="https://www.figma.com/community/file/1299737213921915682" class="text-primary">Design</a>
-                </p>
-                <p class="text-center">© 2024 <a href="https://www.linkedin.com/in/julien-castro/"
-                        class="text-center text-primary">Julien Castro.</a> Tous droits réservés.</p>
-            </div>
-        </footer>
     </div>
-    <script type="module" src="../js/main.js"></script>
+
+    <footer class="bg-zinc-800 text-white p-6 rounded-t-lg flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center justify-between gap-10">
+            <h2 class="text-2xl font-semibold">Une idée, un projet, une envie ?</h2>
+            <a href="mailto:julien.castro@protonmail.com"
+                class="bg-orange-500 text-white py-2 px-4 rounded-lg flex items-center transition transform hover:scale-105 hover:bg-orange-600">
+                Engage moi <span class="ml-2">↗</span>
+            </a>
+        </div>
+        <div class="gap-5 flex">
+            <a href="https://www.linkedin.com" target="_blank" class="transition transform hover:scale-200">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                    alt="LinkedIn" class="inline-block w-6 h-6">
+            </a>
+            <a href="mailto:julien.castro@protonmail.com" class="transition transform hover:scale-200">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email"
+                    class="inline-block w-6 h-6">
+            </a>
+        </div>
+        <div>
+            <p class="text-center">Je me suis inspiré de ce <a
+                    href="https://www.figma.com/community/file/1299737213921915682" class="text-primary">Design</a>
+            </p>
+            <p class="text-center">© 2024 <a href="https://www.linkedin.com/in/julien-castro/"
+                    class="text-center text-primary">Julien Castro.</a> Tous droits réservés.</p>
+        </div>
+    </footer>
+    
 </body>
 
 </html>
