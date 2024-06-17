@@ -14,22 +14,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 "TailwindCSS": '<img src="../assets/icon tools/tailwindcss-icon.svg" alt="Tailwind CSS" class="w-8 h-8">',
                 "Telegram": '<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram Icon" class="icon-img" width="25" height="25" />',
                 "WordPress": '<img src="https://cdn-icons-png.flaticon.com/512/174/174881.png" alt="WordPress Icon" class="icon-img" width="25" height="25" />',
-                "Laravel": '<img src="/assets/icon/laravel.svg" alt="WordPress Icon" class="icon-img" width="25" height="25" />',
+                "Laravel": '<img src="/assets/icon/laravel.svg" alt="Laravel Icon" class="icon-img" width="25" height="25" />',
             };
 
             const projectsGrid = document.getElementById('projects-grid');
 
             projects.forEach(project => {
                 const projectCard = document.createElement('div');
-                projectCard.classList.add('project-card', 'text-center', 'bg-white', 'rounded-full', 'shadow-md', 'overflow-hidden', 'p-4', 'm-2');
+                projectCard.classList.add('project-card', 'text-center', 'bg-white', 'rounded-lg', 'shadow-lg', 'overflow-hidden', 'p-6', 'm-4', 'transition-transform', 'transform', 'hover:scale-105');
                 projectCard.innerHTML = `
-                    <img src="${project.image}" alt="${project.title}" class="rounded-xl mx-auto w-full h-48 object-contain">
-                    <h3 class="mt-4 text-lg font-semibold text-black">${project.title}</h3>
-                    <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">${project.description}</p>
-                    <div class="flex flex-wrap justify-center gap-2 mt-2">
-                        ${project.tags.map(tag => `<span class="inline-block p-1 bg-zinc-200  rounded-md">${techIcons[tag] || tag}</span>`).join('')}
+                    <img src="${project.image}" alt="${project.title}" class="rounded-t-lg w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="mt-2 text-2xl font-semibold text-black">${project.title}</h3>
+                        <p class="mt-2 text-base text-zinc-600 dark:text-zinc-400">${project.description}</p>
+                        <div class="flex flex-wrap justify-center gap-2 mt-4">
+                            ${project.tags.map(tag => `<span class="inline-block p-2 bg-zinc-200 rounded-md">${techIcons[tag] || tag}</span>`).join('')}
+                        </div>
+                        <a href="${project.link}" class="text-white mt-4 block bg-primary py-2 px-6 rounded-full w-fit mx-auto">Voir plus</a>
                     </div>
-                    <a href="${project.link}" class="text-white mt-4 block bg-primary py-2 px-4 rounded-full w-fit mx-auto">Voir plus</a>
                 `;
                 projectsGrid.appendChild(projectCard);
             });
