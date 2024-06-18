@@ -15,7 +15,7 @@ export default defineConfig({
         contact: resolve(__dirname, 'contact/index.html'),
         dataprojet: resolve(__dirname, 'projet/projet.json'),
         jsprojet: resolve(__dirname, 'projet/js.js'),
-        jsonprojet: resolve(__dirname, 'projet.json'),
+        jsonprojet: resolve(__dirname, 'public/projet.json'),
       }
     }
   }
