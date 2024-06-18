@@ -1,6 +1,7 @@
 // vite.config.js
 import { defineConfig } from 'vite'
 import { resolve } from 'path';
+import { json } from 'body-parser';
 
 export default defineConfig({
   base: '',
@@ -14,6 +15,7 @@ export default defineConfig({
         contact: resolve(__dirname, 'contact/index.html'),
         dataprojet: resolve(__dirname, 'projet/projet.json'),
         jsprojet: resolve(__dirname, 'projet/js.js'),
+        jsonprojet: resolve(__dirname, 'projet.json'),
       }
     }
   }
