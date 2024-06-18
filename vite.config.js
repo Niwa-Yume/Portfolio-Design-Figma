@@ -1,7 +1,7 @@
-// vite.config.js
 import { defineConfig } from 'vite'
 import { resolve } from 'path';
-import { json } from 'body-parser';
+// Remplacer l'importation de body-parser avec require
+const bodyParser = require('body-parser');
 
 export default defineConfig({
   base: '',
@@ -18,5 +18,14 @@ export default defineConfig({
         jsonprojet: resolve(__dirname, 'public/projet.json'),
       }
     }
-  }
+  },
+  plugins: [
+    {
+      name: 'configure-server',
+      configureServer(server) {
+        // Utiliser body-parser pour traiter les requêtes JSON
+        server.middlewares.use(bodyParser.json());
+      }
+    }
+  ]
 })
