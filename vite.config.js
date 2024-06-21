@@ -12,8 +12,8 @@ export default defineConfig({
         service: resolve(__dirname, 'service-outil/index.html'),
         dataprojet: resolve(__dirname, 'projet/projet.json'),
         jsprojet: resolve(__dirname, 'projet/js.js'),
-        jsonprojet: resolve(__dirname, 'public/projet.json'),
-        datajsonprojet: resolve(__dirname, '/data/projet.json'),
+        jsonprojet: resolve(__dirname, 'public/projet.json'), // Vérifiez que ce chemin est correct
+        datajsonprojet: resolve(__dirname, 'data/projet.json'),
       }
     }
   },
@@ -21,7 +21,6 @@ export default defineConfig({
     {
       name: 'configure-server',
       configureServer(server) {
-        // Importer dynamiquement body-parser
         import('body-parser').then(bodyParser => {
           server.middlewares.use(bodyParser.json());
         });
