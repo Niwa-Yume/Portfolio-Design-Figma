@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(projects => {
+            console.log('Projets chargés:', projects); // Journalisation pour vérifier le contenu du JSON
             const techIcons = {
                 "HTML": '<img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML Icon" class="icon-img" width="25" height="25" />',
                 "CSS": '<img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS Icon" class="icon-img" width="25" height="25" />',
