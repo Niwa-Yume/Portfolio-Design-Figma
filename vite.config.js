@@ -12,7 +12,6 @@ export default defineConfig({
         service: resolve(__dirname, 'service-outil/index.html'),
         dataprojet: resolve(__dirname, 'projet/projet.json'),
         jsprojet: resolve(__dirname, 'projet/js.js'),
-        jsonprojet: resolve(__dirname, 'public/projet.json'), // Vérifiez que ce chemin est correct
         datajsonprojet: resolve(__dirname, 'data/projet.json'),
       }
     }
