@@ -13,6 +13,7 @@ export default defineConfig({
         dataprojet: resolve(__dirname, 'projet/projet.json'),
         jsprojet: resolve(__dirname, 'projet/js.js'),
         jsonprojet: resolve(__dirname, 'public/projet.json'),
+        datajsonprojet: resolve(__dirname, '/data/projet.json'),
       }
     }
   },
