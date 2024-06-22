@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Telegram": '<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram Icon" class="icon-img" width="25" height="25" />',
                 "WordPress": '<img src="https://cdn-icons-png.flaticon.com/512/174/174881.png" alt="WordPress Icon" class="icon-img" width="25" height="25" />',
                 "Laravel": '<img src="/assets/icon/laravel.svg" alt="Laravel Icon" class="icon-img" width="25" height="25" />',
+                "Scrapy": '<img src="https://cdn-icons-png.flaticon.com/512/919/919853.png" alt="Scrapy Icon" class="icon-img" width="25" height="25" />',
             };
 
             const projectsGrid = document.getElementById('projects-grid');
