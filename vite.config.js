@@ -19,13 +19,6 @@ export default defineConfig({
     }
   },
   plugins: [
-    {
-      name: 'configure-server',
-      configureServer(server) {
-        import('body-parser').then(bodyParser => {
-          server.middlewares.use(bodyParser.json());
-        });
-      }
-    }
+    
   ]
 });
