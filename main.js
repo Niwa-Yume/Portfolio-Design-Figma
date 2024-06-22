@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const projectCard = document.createElement('div');
                 projectCard.classList.add('project-card', 'text-center', 'bg-white', 'dark:bg-zinc-800', 'rounded-xl', 'shadow-md', 'overflow-hidden', 'p-4', 'm-2', 'transition-transform', 'transform', 'hover:scale-105', 'duration-300','justify-center','items-center','flex-col');
                 projectCard.innerHTML = `
-                    <img src="..${project.image}" alt="${project.title}" class=" mx-auto w-full h-48 object-contain">
+                    <img src="/image projet/${project.image}" alt="${project.title}" class=" mx-auto w-full h-48 object-contain">
                     <h3 class="mt-4 text-lg font-semibold text-zinc-800 dark:text-zinc-200">${project.title}</h3>
                     <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">${project.description}</p>
                     <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400"><strong>Date:</strong> ${project.date}</p>
