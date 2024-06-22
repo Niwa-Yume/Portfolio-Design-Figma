@@ -14,7 +14,6 @@ export default defineConfig({
         jsprojet: resolve(__dirname, 'projet/js.js'),
         datajsonprojet: resolve(__dirname, 'public/projet.json'),
         csscontact: resolve(__dirname, 'contact/style.css'),
-        CSS: resolve(__dirname, 'style.css'),
       }
     }
   },
