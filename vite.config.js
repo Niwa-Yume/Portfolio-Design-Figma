@@ -12,7 +12,9 @@ export default defineConfig({
         service: resolve(__dirname, 'service-outil/index.html'),
         dataprojet: resolve(__dirname, 'projet/projet.json'),
         jsprojet: resolve(__dirname, 'projet/js.js'),
-        datajsonprojet: resolve(__dirname, 'data/projet.json'),
+        datajsonprojet: resolve(__dirname, 'public/projet.json'),
+        csscontact: resolve(__dirname, 'contact/style.css'),
+        CSS: resolve(__dirname, 'style.css'),
       }
     }
   },
