@@ -4,6 +4,9 @@ export default {
     "./index.html",
     "./projet/index.html",
     "./contact/index.html",
+    "./service-outil/index.html",
+    "./projet/js.js",
+    "./projet/projet.json",
   ],
   theme: {
     extend: {
