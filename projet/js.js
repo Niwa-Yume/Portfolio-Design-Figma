@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const projectCard = document.createElement('div');
                 projectCard.classList.add('project-card', 'text-center', 'bg-white', 'rounded-lg', 'shadow-lg', 'overflow-hidden', 'p-6', 'm-4', 'transition-transform', 'transform', 'hover:scale-105');
                 projectCard.innerHTML = `
-                    <img src="../${project.image}" alt="${project.title}" class="rounded-t-lg w-full h-64 object-cover">
+                    <img src="..${project.image}" alt="${project.title}" class="rounded-t-lg w-full h-64 object-cover">
                     <div class="p-4">
                         <h3 class="mt-2 text-2xl font-semibold text-black">${project.title}</h3>
                         <p class="mt-2 text-base text-zinc-600 dark:text-zinc-400">${project.description}</p>

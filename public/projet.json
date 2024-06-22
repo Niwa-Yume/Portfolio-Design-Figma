@@ -4,7 +4,7 @@
     "date": "2023",
     "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     "category": "site web",
-    "image": "/assets/noctinium.png",
+    "image": "assets/noctinium.png",
     "description": "Projet personnel de site web pour référencer les soirées nocturnes de Genève et on en organise aussi.",
     "link": "https://noctinium.com"
   },
@@ -13,7 +13,7 @@
     "date": "2023",
     "tags": ["Python", "Scrapy"],
     "category": "Script",
-    "image": "/assets/web scrapping.png",
+    "image": "assets/web scrapping.png",
     "description": "Script qui récupère des informations sur un site web pour les stocker dans un Excel et une base de données.",
     "link": "https://github.com/Niwa-Yume/Bot-scrapy"
   },
